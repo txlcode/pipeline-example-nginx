@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: billy98/nginx-prometheus-metrics:latest
+      image: busybox
       shellScript: |-
         echo 'cdsb' >test.html
 - name: Publish
