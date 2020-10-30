@@ -3,8 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: busybox
-      shellScript: |-
-        echo 'cdsb' >test.html
+      shellScript: echo 'cdsb' >test.html
 - name: Publish
   steps:
   - publishImageConfig:
@@ -15,3 +14,7 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+branch:
+  include:
+  - master
+notification: {}
