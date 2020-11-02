@@ -16,8 +16,8 @@ RUN wget http://nginx.org/download/nginx-1.15.5.tar.gz && \
     echo "ok" >> /usr/local/nginx/html/status.html && \
     cd / && rm -rf nginx-1.15.5* && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  && \
-    groupadd -r redis && \
-    useradd -r -g redis redis && \
+    groupadd -r nginx && \
+    useradd -r -g nginx nginx && \
     mkdir /var/log/nginx/ && \
     chown nginx:nginx /var/log/nginx/ -R
 ENV PATH $PATH:/usr/local/nginx/sbin
