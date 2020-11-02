@@ -22,7 +22,7 @@ RUN wget http://nginx.org/download/nginx-1.15.5.tar.gz && \
     chown nginx:nginx /var/log/nginx/ -R
 ENV PATH $PATH:/usr/local/nginx/sbin
 COPY nginx.conf /usr/local/nginx/conf/nginx.conf
-COPY test.html /usr/share/nginx/html
+COPY test.html /usr/share/nginx/html/test.html
 WORKDIR /usr/local/nginx
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
