@@ -17,7 +17,7 @@ RUN wget http://nginx.org/download/nginx-1.15.5.tar.gz && \
     cd / && rm -rf nginx-1.15.5* && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  && \
     mkdir /var/log/nginx/ &&
-    chmod nginx:nginx /var/log/nginx/ -R
+    chown nginx:nginx /var/log/nginx/ -R
 ENV PATH $PATH:/usr/local/nginx/sbin
 COPY nginx.conf /usr/local/nginx/conf/nginx.conf
 COPY test.html /usr/share/nginx/html
